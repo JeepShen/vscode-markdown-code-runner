@@ -4,6 +4,7 @@ Run code snippet in markdown language for multiple languages: **bash,python, gol
 
 ## Contact
 
+github: https://github.com/JeepShen/vscode-markdown-code-runner
 email: jianpushen@gamil.com
 
 ## Features
@@ -18,6 +19,7 @@ email: jianpushen@gamil.com
 * To run code:
   * Edit code blocks in markdown file (.md).
   * Click `Run` button at bottom of the active code block.
-  
+
+
 ## Change Log
 - 2020.06.14  release 0.1.0 
