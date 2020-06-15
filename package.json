@@ -17,13 +17,13 @@
 		"code runner"
 	],
 	"bugs": {
-		"url": "https://",
+		"url": "https://github.com/JeepShen/vscode-markdown-code-runner/issues",
 		"email": "jianpushen@gmail.com"
 	},
-	"homepage": "http://",
+	"homepage": "https://github.com/JeepShen/vscode-markdown-code-runner",
 	"repository": {
 		"type": "git",
-		"url": "https://"
+		"url": "https://github.com/JeepShen/vscode-markdown-code-runner"
 	},
 	"activationEvents": [
 		"onLanguage:markdown"
