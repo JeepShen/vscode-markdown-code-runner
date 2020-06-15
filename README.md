@@ -20,6 +20,6 @@ email: jianpushen@gamil.com
   * Edit code blocks in markdown file (.md).
   * Click `Run` button at bottom of the active code block.
 
-
+![demo.gif](https://github.com/JeepShen/vscode-markdown-code-runner/blob/master/images/demo.gif)
 ## Change Log
 - 2020.06.14  release 0.1.0 
