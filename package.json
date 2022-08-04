@@ -1,169 +1,169 @@
 {
-	"name": "vscode-markdown-code-runner",
-	"displayName": "Markdown Code Runner",
-	"description": "Run markdown code snippets.",
-	"publisher": "jeepshen",
-	"icon": "images/logo.png",
-	"version": "0.1.1",
-	"engines": {
-		"vscode": "^1.45.1"
-	},
-	"categories": [
-		"Other",
-		"Snippets"
-	],
-	"keywords": [
-		"markdown",
-		"code runner"
-	],
-	"bugs": {
-		"url": "https://github.com/JeepShen/vscode-markdown-code-runner/issues",
-		"email": "jianpushen@gmail.com"
-	},
-	"homepage": "https://github.com/JeepShen/vscode-markdown-code-runner",
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/JeepShen/vscode-markdown-code-runner"
-	},
-	"activationEvents": [
-		"onLanguage:markdown"
-	],
-	"main": "./src/extension.js",
-	"contributes": {
-		"commands": [
-			{
-				"command": "markdown-code-runner.run",
-				"title": "Run Snippet"
-			},
-			{
-				"command": "markdown-code-runner.save",
-				"title": "Save Snippet"
-			}
-		],
-		"configuration": [
-			{
-				"title": "Markdown Code Runner",
-				"properties": {
-					"markdown-code-runner.workspaceFolder": {
-						"type": "string",
-						"scope": "application",
-						"description": "The path of the workspace folder to store the problem files.",
-						"default": ""
-					},
-					"markdown-code-runner.runInTerminal": {
-						"type": "boolean",
-						"scope": "application",
-						"description": "Run in terminal otherwise output channel.",
-						"default": true
-					},
-					"markdown-code-runner.showExecutionMessage": {
-						"type": "boolean",
-						"scope": "application",
-						"description": "show execution detail message.",
-						"default": true
-					},
-					"markdown-code-runner.terminalRoot": {
-						"type": "boolean",
-						"scope": "application",
-						"description": "terminal root in win32.",
-						"default": true
-					},
-					"markdown-code-runner.executorMap": {
-						"type": "object",
-						"default": {
-							"javascript": "node",
-							"java": "cd $dir && javac $fileName && java $fileNameWithoutExt",
-							"c": "cd $dir && gcc $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
-							"cpp": "cd $dir && g++ $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
-							"objective-c": "cd $dir && gcc -framework Cocoa $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
-							"php": "php",
-							"python": "python2 -u",
-							"python3": "python3 -u",
-							"bash": "bash -x",
-							"perl": "perl",
-							"perl6": "perl6",
-							"ruby": "ruby",
-							"golang": "go run",
-							"lua": "lua",
-							"groovy": "groovy",
-							"powershell": "powershell -ExecutionPolicy ByPass -File",
-							"bat": "cmd /c",
-							"shellscript": "bash",
-							"fsharp": "fsi",
-							"csharp": "scriptcs",
-							"vbscript": "cscript //Nologo",
-							"typescript": "ts-node",
-							"coffeescript": "coffee",
-							"scala": "scala",
-							"swift": "swift",
-							"julia": "julia",
-							"crystal": "crystal",
-							"ocaml": "ocaml",
-							"r": "Rscript",
-							"applescript": "osascript",
-							"clojure": "lein exec",
-							"haxe": "haxe --cwd $dirWithoutTrailingSlash --run $fileNameWithoutExt",
-							"rust": "cd $dir && rustc $fileName && $dir$fileNameWithoutExt",
-							"racket": "racket",
-							"scheme": "csi -script",
-							"ahk": "autohotkey",
-							"autoit": "autoit3",
-							"dart": "dart",
-							"pascal": "cd $dir && fpc $fileName && $dir$fileNameWithoutExt",
-							"d": "cd $dir && dmd $fileName && $dir$fileNameWithoutExt",
-							"haskell": "runhaskell",
-							"nim": "nim compile --verbosity:0 --hints:off --run",
-							"lisp": "sbcl --script",
-							"kit": "kitc --run",
-							"v": "v run",
-							"sass": "sass --style expanded",
-							"scss": "scss --style expanded",
-							"less": "cd $dir && lessc $fileName $fileNameWithoutExt.css"
-						},
-						"description": "Set the executor of each language.",
-						"scope": "resource"
-					},
-					"markdown-code-runner.editor.shortcuts": {
-						"type": "array",
-						"default": [
-							"run"
-						],
-						"scope": "application",
-						"items": {
-							"type": "string",
-							"enum": [
-								"run",
-								"save"
-							]
-						},
-						"description": "Customize the shorcuts in editors."
-					}
-				}
-			}
-		]
-	},
-	"scripts": {
-		"vscode:prepublish": "npm run compile",
-		"compile": "tsc -p ./",
-		"lint": "eslint src --ext ts",
-		"watch": "tsc -watch -p ./",
-		"pretest": "npm run compile && npm run lint",
-		"test": "node ./out/test/runTest.js"
-	},
-	"devDependencies": {
-		"@types/glob": "^7.1.1",
-		"@types/mocha": "^7.0.2",
-		"@types/node": "^13.11.0",
-		"@types/vscode": "^1.45.1",
-		"@typescript-eslint/eslint-plugin": "^2.30.0",
-		"@typescript-eslint/parser": "^2.30.0",
-		"eslint": "^6.8.0",
-		"glob": "^7.1.6",
-		"micromatch": "^4.0.2",
-		"mocha": "^7.1.2",
-		"tree-kill": "^1.2.2",
-		"typescript": "^3.8.3",
-		"vscode-test": "^1.3.0"
-	},
-	"dependencies": {}
+  "name": "vscode-markdown-code-runner",
+  "displayName": "Markdown Code Runner",
+  "description": "Run markdown code snippets.",
+  "publisher": "jeepshen",
+  "icon": "images/logo.png",
+  "version": "0.1.1",
+  "engines": {
+    "vscode": "^1.45.1"
+  },
+  "categories": [
+    "Other",
+    "Snippets"
+  ],
+  "keywords": [
+    "markdown",
+    "code runner"
+  ],
+  "bugs": {
+    "url": "https://github.com/JeepShen/vscode-markdown-code-runner/issues",
+    "email": "jianpushen@gmail.com"
+  },
+  "homepage": "https://github.com/JeepShen/vscode-markdown-code-runner",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/JeepShen/vscode-markdown-code-runner"
+  },
+  "activationEvents": [
+    "onLanguage:markdown"
+  ],
+  "main": "./src/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "markdown-code-runner.run",
+        "title": "Run Snippet"
+      },
+      {
+        "command": "markdown-code-runner.save",
+        "title": "Save Snippet"
+      }
+    ],
+    "configuration": [
+      {
+        "title": "Markdown Code Runner",
+        "properties": {
+          "markdown-code-runner.workspaceFolder": {
+            "type": "string",
+            "scope": "application",
+            "description": "The path of the workspace folder to store the problem files.",
+            "default": ""
+          },
+          "markdown-code-runner.runInTerminal": {
+            "type": "boolean",
+            "scope": "application",
+            "description": "Run in terminal otherwise output channel.",
+            "default": true
+          },
+          "markdown-code-runner.showExecutionMessage": {
+            "type": "boolean",
+            "scope": "application",
+            "description": "show execution detail message.",
+            "default": true
+          },
+          "markdown-code-runner.terminalRoot": {
+            "type": "boolean",
+            "scope": "application",
+            "description": "terminal root in win32.",
+            "default": true
+          },
+          "markdown-code-runner.executorMap": {
+            "type": "object",
+            "default": {
+              "javascript": "node",
+              "java": "cd $dir && javac $fileName && java $fileNameWithoutExt",
+              "c": "cd $dir && gcc $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+              "cpp": "cd $dir && g++ $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+              "objective-c": "cd $dir && gcc -framework Cocoa $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+              "php": "php",
+              "python": "python -u",
+              "python3": "python3 -u",
+              "bash": "bash -x",
+              "perl": "perl",
+              "perl6": "perl6",
+              "ruby": "ruby",
+              "golang": "go run",
+              "lua": "lua",
+              "groovy": "groovy",
+              "powershell": "powershell -ExecutionPolicy ByPass -File",
+              "bat": "cmd /c",
+              "shellscript": "bash",
+              "fsharp": "fsi",
+              "csharp": "scriptcs",
+              "vbscript": "cscript //Nologo",
+              "typescript": "ts-node",
+              "coffeescript": "coffee",
+              "scala": "scala",
+              "swift": "swift",
+              "julia": "julia",
+              "crystal": "crystal",
+              "ocaml": "ocaml",
+              "r": "Rscript",
+              "applescript": "osascript",
+              "clojure": "lein exec",
+              "haxe": "haxe --cwd $dirWithoutTrailingSlash --run $fileNameWithoutExt",
+              "rust": "cd $dir && rustc $fileName && $dir$fileNameWithoutExt",
+              "racket": "racket",
+              "scheme": "csi -script",
+              "ahk": "autohotkey",
+              "autoit": "autoit3",
+              "dart": "dart",
+              "pascal": "cd $dir && fpc $fileName && $dir$fileNameWithoutExt",
+              "d": "cd $dir && dmd $fileName && $dir$fileNameWithoutExt",
+              "haskell": "runhaskell",
+              "nim": "nim compile --verbosity:0 --hints:off --run",
+              "lisp": "sbcl --script",
+              "kit": "kitc --run",
+              "v": "v run",
+              "sass": "sass --style expanded",
+              "scss": "scss --style expanded",
+              "less": "cd $dir && lessc $fileName $fileNameWithoutExt.css"
+            },
+            "description": "Set the executor of each language.",
+            "scope": "resource"
+          },
+          "markdown-code-runner.editor.shortcuts": {
+            "type": "array",
+            "default": [
+              "run"
+            ],
+            "scope": "application",
+            "items": {
+              "type": "string",
+              "enum": [
+                "run",
+                "save"
+              ]
+            },
+            "description": "Customize the shorcuts in editors."
+          }
+        }
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "lint": "eslint src --ext ts",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "test": "node ./out/test/runTest.js"
+  },
+  "devDependencies": {
+    "@types/glob": "^7.1.1",
+    "@types/mocha": "^7.0.2",
+    "@types/node": "^13.11.0",
+    "@types/vscode": "^1.45.1",
+    "@typescript-eslint/eslint-plugin": "^2.30.0",
+    "@typescript-eslint/parser": "^2.30.0",
+    "eslint": "^6.8.0",
+    "glob": "^7.1.6",
+    "micromatch": "^4.0.2",
+    "mocha": "^7.1.2",
+    "tree-kill": "^1.2.2",
+    "typescript": "^3.8.3",
+    "vscode-test": "^1.3.0"
+  },
+  "dependencies": {}
 }
