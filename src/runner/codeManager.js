@@ -256,7 +256,12 @@ class CodeManager {
             let command = yield this.getFinalCommandToRunCodeFile(executor, appendFile);
             command = this.changeFilePathForBashOnWindows(command);
             if (!isNewTerminal) {
-                yield vscode.commands.executeCommand("workbench.action.terminal.clear");
+                try {
+                    yield vscode.commands.executeCommand("workbench.action.terminal.clear"); 
+                } 
+                catch (e) { 
+                    console.warn("vscode-markdown-code-runner: workbench.action.terminal.clear could not execute, skipping")
+                }
             }
             this._terminal.sendText(command);
         });
